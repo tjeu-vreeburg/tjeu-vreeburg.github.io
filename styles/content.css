@@ -40,7 +40,7 @@
 }
 
 .hero-text h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: white;
 }
@@ -81,6 +81,10 @@
         grid-row: 2; /* second row */
         order: 2;
         text-align: center;
+    }
+    .hero-text h2 {
+        font-size: 1.5rem;
+        color: white;
     }
 }
 

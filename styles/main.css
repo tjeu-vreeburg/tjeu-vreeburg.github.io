@@ -43,6 +43,12 @@ nav {
     padding: 1rem 2rem;
 }
 
+li {
+  list-style: none;
+  justify-content: center;
+  font-size: 16px;
+}
+
 .header {
     position: relative;
     text-align: center;
@@ -120,8 +126,9 @@ nav {
 .inner-header {
     height: 80vh;
     width: 100%;
-    margin: 0px;
-    padding: 0;
+    margin: 0;
+    padding: 100px;
+    white-space: nowrap;
 }
 
 /* Hide hamburger on desktop */
@@ -142,6 +149,7 @@ nav {
     display: inline-block;
     width: 50%;
     margin: auto;
+    white-space: nowrap;
 }
 
 .btn-primary {
@@ -187,21 +195,35 @@ nav {
 /* Responsive styles */
 @media (max-width: 768px) {
     .inner-header {
-        padding-top: 100px;
-        padding-bottom: 80px;
         height: auto;
+        padding-top: 125px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 50px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .logo.scrolled {
+        font-size: 16px;
     }
 
     .nav-links {
         display: none; /* Hide nav links */
         position: absolute;
-        top: 60px; /* adjust based on nav height */
+        top: 80px; /* adjust based on nav height */
         right: 20px;
         background-color: white;
+        padding: 20px;
         flex-direction: column;
         width: 150px;
         border-radius: 8px;
-        padding: 10px 0;
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         z-index: 9999;
         opacity: 0;
@@ -224,13 +246,9 @@ nav {
         color: rgb(111, 195, 248);
         display: block;
     }
-
+    
     .hamburger {
         display: flex; /* show hamburger */
-    }
-
-    /* Hamburger button - hidden on desktop */
-    .hamburger {
         position: relative;
         width: 25px;
         height: 20px;
