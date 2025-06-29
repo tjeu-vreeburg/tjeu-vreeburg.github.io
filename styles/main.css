@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+/* Header */
+header {
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(55deg,rgba(161, 235, 255, 1) 0%, rgba(0, 120, 194, 1) 100%);
+    color:white;
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+    text-align: center;
+    padding: 40px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo.scrolled {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(69, 160, 216);
+}
+
+.logo-icon {
+    width:50px;
+    fill:white;
+    padding-right:15px;
+    display:inline-block;
+    vertical-align: middle;
+}
+
+.flex { /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.scrolled {
+    text-decoration: none;
+    color: rgb(69, 160, 216);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(69, 160, 216);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #3BAED4;
+}
+
+.inner-header {
+    height: 80vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+}
+
+
+/* Generic Buttons */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+}
+
+.btn-primary {
+    background: white;
+    color: rgb(111, 195, 248);
+    box-shadow: 0 4px 15px linear-gradient(55deg,rgba(161, 235, 255, 1) 0%, rgba(0, 120, 194, 1) 100%);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px linear-gradient(55deg,rgba(161, 235, 255, 1) 0%, rgba(0, 120, 194, 1) 100%);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: rgb(111, 195, 248);
+}
+
+/* Custom scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a; /* Background of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg,rgba(161, 235, 255, 1) 0%, rgba(0, 120, 194, 1) 100%); /* Scroll thumb gradient */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg,rgba(161, 235, 255, 1) 0%, rgba(0, 120, 194, 1) 100%); /* On hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .inner-header {
+        padding-top: 100px;
+        padding-bottom: 80px;
+        height: auto;
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links */
+        position: absolute;
+        top: 60px; /* adjust based on nav height */
+        right: 20px;
+        background-color: white;
+        flex-direction: column;
+        width: 150px;
+        border-radius: 8px;
+        padding: 10px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        z-index: 9999;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        animation: slideFadeIn 0.3s ease forwards;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links a {
+        color: rgb(111, 195, 248);
+        display: block;
+    }
+
+    .hamburger {
+        display: flex; /* show hamburger */
+    }
+
+    /* Hamburger button - hidden on desktop */
+    .hamburger {
+        position: relative;
+        width: 25px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 10001; /* above nav */
+    }
+
+    .hamburger span {
+        display: block;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+
+    /* Animate to "X" when active */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5.5px, 5.5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5.5px, -5.5px);
+    }
+}

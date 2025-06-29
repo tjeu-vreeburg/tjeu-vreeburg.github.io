@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/animation.css">
+    <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/smooth-scroll.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
+    <title>Tjeu Vreeburg - Software Developer</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tjeu Vreeburg</div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="header" id="home">
+            <div class="inner-header flex">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="subtitle">Tjeu Vreeburg</p>
+                        <h2>A Software Engineer.</h2>
+                        
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary">Projects</a>
+                            <a href="#resume" class="btn btn-secondary">My Resume</a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <div class="profile-circle">
+                            <div class="profile-inner">
+                                <img class="profile-img" src="https://media.licdn.com/dms/image/v2/D5603AQFTMCdrkHPCAA/profile-displayphoto-shrink_800_800/B56ZQbsOuSGsAg-/0/1735631367626?e=1756339200&v=beta&t=d5_i-54ILYc70emVHCqmDAqzt2FuWbQGh9JqD1ZQ-qE">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Waves Container-->
+            <svg class="waves"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </section>
+
+        <section class="services" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2>About me</h2>
+                    <p class="about-text noto-sans-mono-font">
+                        I started my software journey from photography, through that, I learned to 
+                        love the process of creating from scratch. Since then, this has led me to 
+                        software development as it fulfills my love for learning and building things.
+                    </p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">120+</div>
+                            <div class="stat-label">Completed Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Years of Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                     <img src="https://img.itch.zone/aW1hZ2UvNzc3OTU2LzQ1NTIxNTQuanBn/original/gWhbP3.jpg" alt="Project 1" class="project-card-image" />
+                        <div class="project-card-content">
+                            <h3>Longhaus</h3>
+                            <p>An immersive viking themed, RTS, tower defense game</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://i.imgur.com/t3WaEzn.jpeg" alt="Project 2" class="project-card-image" />
+                        <div class="project-card-content">
+                            <h3> Airline Manager</h3>
+                            <p>Manage a great fleet of aircraft and open up hubs around the world</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <img src="https://i.imgur.com/t3WaEzn.jpeg" alt="Project 2" class="project-card-image" />
+                        <div class="project-card-content">
+                            <h3> Airline Manager</h3>
+                            <p>Manage a great fleet of aircraft and open up hubs around the world</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="scripts/smooth-scroll.js"></script>
+</body>
+</html>
