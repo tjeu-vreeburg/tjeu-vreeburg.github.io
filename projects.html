@@ -15,7 +15,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo"><a href="#home"><i class="fa-solid fa-code"></i></a></div>
+            <div class="logo"><a href="index.html">Tjeu Vreeburg</a></div>
 
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -24,33 +24,40 @@
             </div>
 
             <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="header" id="home">
-            <div class="inner-header flex">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <p class="subtitle">Tjeu Vreeburg</p>
-                        <h2>A Software Engineer.</h2>
-                        
-                        <div class="hero-buttons">
-                            <a href="projects.html" class="btn btn-primary">Projects</a>
-                            <a href="https://drive.google.com/file/d/17K9hkpYKStfJ5LgBs3f5tcqTUfYjmjs-/view?usp=drive_link" class="btn btn-secondary">
-                                My Resume <i class="fa-solid fa-file-arrow-down"> </i>
-                            </a>
+        <section class="header">
+            <div class="inner-header">
+                <div class="container">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card" data-url="https://gendlygames.itch.io/longhaus">
+                            <img src="resources\images\longhaus.jpg" alt="Project 1" class="project-card-image" />
+                            <div class="project-card-content">
+                                <h3>Longhaus</h3>
+                                <p>An immersive viking themed, RTS, tower defense game</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="hero-image">
-                        <div class="profile-circle">
-                            <div class="profile-inner">
-                                <img class="profile-img" src="https://media.licdn.com/dms/image/v2/D5603AQFTMCdrkHPCAA/profile-displayphoto-shrink_800_800/B56ZQbsOuSGsAg-/0/1735631367626?e=1756339200&v=beta&t=d5_i-54ILYc70emVHCqmDAqzt2FuWbQGh9JqD1ZQ-qE">
+
+                        <div class="project-card" data-url="https://www.grabbit.nz/">
+                            <img src="resources\images\galaxy.jpg" alt="Project 2" class="project-card-image" />
+                            <div class="project-card-content">
+                                <h3>Twisted Tales</h3>
+                                <p>Interactive stories on googles interactive canvas</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-url="">
+                            <img src="resources\images\airplane.png" alt="Project 2" class="project-card-image" />
+                            <div class="project-card-content">
+                                <h3>Aviation Manager</h3>
+                                <p>A personal passion project</p>
                             </div>
                         </div>
                     </div>

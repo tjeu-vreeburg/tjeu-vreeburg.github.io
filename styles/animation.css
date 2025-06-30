@@ -1,5 +1,8 @@
 .parallax > use {
-    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+    animation-name: move-forever;
+    animation-timing-function: cubic-bezier(.55, .5, .45, .5);
+    animation-iteration-count: infinite;
+    animation-duration: 25s; /* default duration */
 }
 
 .parallax > use:nth-child(1) {
@@ -54,6 +57,27 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+body.fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+body.fade-in.show {
+    opacity: 1;
+}
+
+/* Fade-out when navigating away */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {

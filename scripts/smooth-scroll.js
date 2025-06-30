@@ -11,27 +11,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll effect to header and tech bar
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    const logo = document.querySelector('.logo');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const techBar = document.querySelector('.tech-bar');
-    
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-        logo.classList.add('scrolled');
-        navLinks.forEach(div => div.classList.add('scrolled'));
-    } else {
-        header.classList.remove('scrolled');
-        logo.classList.remove('scrolled');
-        navLinks.forEach(div => div.classList.remove('scrolled'));
-    }
+document.addEventListener("scroll", function () {
+    const parallax = document.querySelector(".parallax-bg");
+    const section = document.querySelector(".parallax-section");
 
-    // Hide tech bar when scrolling down significantly
-    if (window.scrollY > 200) {
-        techBar.classList.add('hidden');
-    } else {
-        techBar.classList.remove('hidden');
+    if (parallax && section) {
+        const sectionTop = section.offsetTop;
+        const scrollY = window.scrollY;
+
+        if (scrollY + window.innerHeight > sectionTop) {
+            const offset = (scrollY - sectionTop) * 0.4;
+            parallax.style.transform = `translateY(${offset}px)`;
+        }
     }
+});
+
+// Add scroll effect to header and tech bar
+const header = document.querySelector('header');
+const logo = document.querySelector('.logo a');
+const navLinks = document.querySelectorAll('.nav-links a');
+const hamburger = document.querySelectorAll('.hamburger span');
+
+window.addEventListener('scroll', () => {
+    const isScrolled = window.scrollY > 50;
+
+    header.classList.toggle('scrolled', isScrolled);
+    logo.classList.toggle('scrolled', isScrolled);
+    
+    navLinks.forEach(link => link.classList.toggle('scrolled', isScrolled));
+    hamburger.forEach(span => span.classList.toggle('scrolled', isScrolled));
 });

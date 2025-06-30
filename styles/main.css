@@ -3,18 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 
-
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Raleway', 'sans-serif';
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+main {
+    flex: 1;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background: white;
     color: #1e293b;
-    line-height: 1.6;
 }
 
 
@@ -65,15 +71,15 @@ li {
     padding: 40px;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo a {
+    font-size: 1.2rem;
+    font-weight: 600;
     color: #fff;
+    text-decoration: none;
 }
 
-.logo.scrolled {
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo a.scrolled {
+    font-size: 1.2rem;
     color: rgb(69, 160, 216);
 }
 
@@ -93,16 +99,38 @@ li {
 }
 
 .nav-links {
+    display: none; /* Hide nav links */
+    position: absolute;
+    top: 60px; /* adjust based on nav height */
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    flex-direction: column;
+    width: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links.active {
     display: flex;
-    list-style: none;
-    gap: 2rem;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideFadeIn 0.3s ease forwards;
+}
+
+.nav-links li {
+    text-align: center;
 }
 
 .nav-links a {
+    padding: 8px 16px;
     text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    color: rgb(111, 195, 248);
+    display: block;
 }
 
 .nav-links a.scrolled {
@@ -116,26 +144,65 @@ li {
     color: rgb(69, 160, 216);
 }
 
+
 .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #3BAED4;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.section-title-light {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
 }
 
 .inner-header {
-    height: 80vh;
+    height: 76vh;
     width: 100%;
     margin: 0;
     padding: 100px;
     white-space: nowrap;
 }
 
-/* Hide hamburger on desktop */
 .hamburger {
-  display: none;
+    display: flex; /* show hamburger */
+    position: relative;
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger span.scrolled {
+    background-color: rgb(111, 195, 248);
+}
+
+/* Animate to "X" when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5.5px, 5.5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5.5px, -5.5px);
+}
 
 /* Generic Buttons */
 .btn {
@@ -146,10 +213,13 @@ li {
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em; /* ⬅️ this adds space between text and icon */
     width: 50%;
     margin: auto;
     white-space: nowrap;
+    justify-content: center;
 }
 
 .btn-primary {
@@ -196,10 +266,11 @@ li {
 @media (max-width: 768px) {
     .inner-header {
         height: auto;
-        padding-top: 125px;
+        padding: 100px;
+        padding-top: 100px;
         padding-left: 100px;
         padding-right: 100px;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 
     .btn {
@@ -212,72 +283,5 @@ li {
 
     .logo.scrolled {
         font-size: 16px;
-    }
-
-    .nav-links {
-        display: none; /* Hide nav links */
-        position: absolute;
-        top: 80px; /* adjust based on nav height */
-        right: 20px;
-        background-color: white;
-        padding: 20px;
-        flex-direction: column;
-        width: 150px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        z-index: 9999;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .nav-links.active {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-        animation: slideFadeIn 0.3s ease forwards;
-    }
-
-    .nav-links li {
-        text-align: center;
-    }
-
-    .nav-links a {
-        color: rgb(111, 195, 248);
-        display: block;
-    }
-    
-    .hamburger {
-        display: flex; /* show hamburger */
-        position: relative;
-        width: 25px;
-        height: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-        z-index: 10001; /* above nav */
-    }
-
-    .hamburger span {
-        display: block;
-        height: 3px;
-        background-color: white;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-        transform-origin: center;
-    }
-
-    /* Animate to "X" when active */
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5.5px, 5.5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5.5px, -5.5px);
     }
 }
