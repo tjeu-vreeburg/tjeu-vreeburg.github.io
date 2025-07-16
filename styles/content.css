@@ -101,7 +101,7 @@
 }
 
 .social-links {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
@@ -309,7 +309,9 @@
 .project-card:hover {
     transform: translateY(-5px);
     cursor: pointer;
+    filter: blur(0px);
 }
+
 
 .project-card-image {
     position: absolute;
@@ -319,7 +321,13 @@
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    background: linear-gradient(55deg,rgb(255, 255, 255) 0%, rgb(208, 237, 255) 100%);;
+    background: linear-gradient(55deg,rgb(255, 255, 255) 0%, rgb(208, 237, 255) 100%);
+    filter: blur(4px);
+    transition: filter 0.3s ease;
+}
+
+.project-card:hover .project-card-image {
+    filter: blur(0px);
 }
 
 .project-card-content {
