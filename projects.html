@@ -6,16 +6,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/animation.css">
-    <link rel="stylesheet" href="styles/content.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:500italic,600italic,600,700,700italic,300italic,300,400,400italic,800,900' rel='stylesheet' type='text/css'>
-    <title>Tjeu Vreeburg - Software Developer</title>
+    <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="styles/animation.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,400italic,500italic,600,600italic,700,700italic,800,900' rel='stylesheet' type='text/css'>
+    <title>Tjeu Vreeburg - Projects</title>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo"><a href="index.html">Tjeu Vreeburg</a></div>
+            <div class="logo"><a href="index.html"><i class="fa-solid fa-code"></i></a></div>
 
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -25,46 +25,56 @@
 
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="header">
-            <div class="inner-header">
-                <div class="container">
-                    <h2 class="section-title">Projects</h2>
+        <section class="projects-section">
+            <div class="projects-section-inner">
+                <div class="projects-header">
+                    <h2 class="section-title">My Projects</h2>
+                    <p class="projects-subtitle">Showcasing some of my finest work across gaming, web, and software development</p>
+                </div>
+
+                <div class="projects-grid-wrap">
                     <div class="projects-grid">
                         <div class="project-card" data-url="https://gendlygames.itch.io/longhaus">
-                            <img src="resources\images\longhaus.jpg" alt="Project 1" class="project-card-image" />
+                            <img src="resources/images/longhaus.jpg" alt="Longhaus Game" class="project-card-image" />
+                            <div class="project-card-overlay"></div>
                             <div class="project-card-content">
                                 <h3>Longhaus</h3>
-                                <p>An immersive viking themed, RTS, tower defense game</p>
+                                <p>An immersive viking themed, RTS, tower defense game with engaging gameplay</p>
+                                <span class="project-link">Play Game →</span>
                             </div>
                         </div>
 
                         <div class="project-card" data-url="https://www.grabbit.nz/">
-                            <img src="resources\images\galaxy.jpg" alt="Project 2" class="project-card-image" />
+                            <img src="resources/images/galaxy.jpg" alt="Twisted Tales" class="project-card-image" />
+                            <div class="project-card-overlay"></div>
                             <div class="project-card-content">
                                 <h3>Twisted Tales</h3>
-                                <p>Interactive stories on googles interactive canvas</p>
+                                <p>Interactive stories on Google's interactive canvas platform</p>
+                                <span class="project-link">View Project →</span>
                             </div>
                         </div>
 
-                        <div class="project-card" data-url="">
-                            <img src="resources\images\airplane.png" alt="Project 2" class="project-card-image" />
+                        <div class="project-card" data-url="#">
+                            <img src="resources/images/airplane.png" alt="Aviation Manager" class="project-card-image" />
+                            <div class="project-card-overlay"></div>
                             <div class="project-card-content">
                                 <h3>Aviation Manager</h3>
-                                <p>A personal passion project</p>
+                                <p>A personal passion project for aviation enthusiasts</p>
+                                <span class="project-link">Coming Soon →</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Optional Waves -->
+            <!-- Waves — sits outside inner padding, flush at bottom of section -->
             <svg class="waves" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -81,9 +91,11 @@
             </svg>
         </section>
     </main>
+
     <footer>
-        <p class="copyright">© 2025 Tjeu Vreeburg | All Rights Reserved</p>
+        <p class="copyright">© 2026 Tjeu Vreeburg | All Rights Reserved</p>
     </footer>
+
     <script src="scripts/smooth-scroll.js" defer></script>
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/page-transition.js" defer></script>

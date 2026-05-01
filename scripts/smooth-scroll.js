@@ -26,18 +26,18 @@ document.addEventListener("scroll", function () {
     }
 });
 
-// Add scroll effect to header and tech bar
+// Scroll effect for header — change colours when scrolled
 const header = document.querySelector('header');
-const logo = document.querySelector('.logo a');
-const navLinks = document.querySelectorAll('.nav-links a');
-const hamburger = document.querySelectorAll('.hamburger span');
+const logoLink = document.querySelector('.logo a');
+const navLinkEls = document.querySelectorAll('.nav-links a');
+const hamburgerSpans = document.querySelectorAll('.hamburger span');
 
 window.addEventListener('scroll', () => {
     const isScrolled = window.scrollY > 50;
 
-    header.classList.toggle('scrolled', isScrolled);
-    logo.classList.toggle('scrolled', isScrolled);
-    
-    navLinks.forEach(link => link.classList.toggle('scrolled', isScrolled));
-    hamburger.forEach(span => span.classList.toggle('scrolled', isScrolled));
+    if (header) header.classList.toggle('scrolled', isScrolled);
+    if (logoLink) logoLink.classList.toggle('scrolled', isScrolled);
+
+    navLinkEls.forEach(link => link.classList.toggle('scrolled', isScrolled));
+    hamburgerSpans.forEach(span => span.classList.toggle('scrolled', isScrolled));
 });

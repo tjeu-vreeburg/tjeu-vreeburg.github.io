@@ -6,18 +6,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/animation.css">
-    <link rel="stylesheet" href="styles/content.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:500italic,600italic,600,700,700italic,300italic,300,400,400italic,800,900' rel='stylesheet' type='text/css'>
-    <title>Tjeu Vreeburg - Software Developer</title>
+    <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="styles/animation.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,400italic,500italic,600,600italic,700,700italic,800,900' rel='stylesheet' type='text/css'>
+    <title>Tjeu Vreeburg - Contact</title>
 
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo"><a href="index.html">Tjeu Vreeburg</a></div>
+            <div class="logo"><a href="index.html"><i class="fa-solid fa-code"></i></a></div>
 
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -28,39 +28,48 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="header" id="home">
-            <div class="inner-header flex">
-                <div class="container">
-                    <div class="container contact-grid">
-                        <!-- Contact Form -->
+        <section class="contact-section">
+            <div class="contact-section-inner">
+                <div class="contact-header">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-subtitle">Whether you have a project in mind or just want to say hello — reach out!</p>
+                </div>
+
+                <div class="contact-body">
+                    <div class="contact-grid">
+                        <!-- Form -->
                         <div class="contact-left">
-                            <h2 class="section-title">Get in Touch</h2>
                             <form action="https://formspree.io/f/myzjokll" method="POST" class="contact-form">
                                 <input type="text" name="name" placeholder="Your Name" required>
                                 <input type="email" name="_replyto" placeholder="Your Email" required>
                                 <textarea name="message" placeholder="Your Message" required></textarea>
-                                <button type="submit" class="btn">Send Message</button>
+                                <button type="submit" class="contact-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
                             </form>
+
                             <div class="social-links">
-                                <a href="https://wa.link/2gkihv" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                                <a href="https://github.com/tjeu-vreeburg" target="_blank"><i class="fab fa-github"></i></a>
-                                <a href="https://linkedin.com/in/tjeuvreeburg" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://wa.link/2gkihv" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://github.com/tjeu-vreeburg" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://linkedin.com/in/tjeuvreeburg" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
-                         <div class="contact-right">
-                            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="tjeuvreeburg" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://nz.linkedin.com/in/tjeuvreeburg?trk=profile-badge"></a></div>
-                         </div>
+
+                        <!-- LinkedIn Badge -->
+                        <div class="contact-right">
+                            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="tjeuvreeburg" data-version="v1">
+                                <a class="badge-base__link LI-simple-link" href="https://nz.linkedin.com/in/tjeuvreeburg?trk=profile-badge"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Optional Waves -->
+            <!-- Waves -->
             <svg class="waves" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -77,9 +86,11 @@
             </svg>
         </section>
     </main>
+
     <footer>
-        <p class="copyright">© 2025 Tjeu Vreeburg | All Rights Reserved</p>
+        <p class="copyright">© 2026 Tjeu Vreeburg | All Rights Reserved</p>
     </footer>
+
     <script src="scripts/smooth-scroll.js" defer></script>
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/page-transition.js" defer></script>
